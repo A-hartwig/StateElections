@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State – 2026 Primary Election Candidates</title>
+  <meta name="description"
+        content="2026 primary election candidates for this state, organized by race and party affiliation." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">
+        <span class="flag-icon">🗳️</span>
+        <span>
+          <span class="brand-text">StateElections</span>
+          <span class="brand-sub">2026 Primary Candidates</span>
+        </span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="page-container">
+
+    <!-- Back navigation -->
+    <a id="backLink" href="index.html" class="back-link">← All States</a>
+
+    <!-- State header -->
+    <div class="state-detail-header">
+      <h1 id="stateTitle">Loading…</h1>
+      <p class="subtitle" id="stateSubtitle"></p>
+    </div>
+
+    <!-- Races & candidates (rendered by state.js) -->
+    <div id="racesContainer"></div>
+
+    <!-- Data note -->
+    <p style="margin-top:2.5rem;font-size:.8rem;color:#94a3b8;border-top:1px solid #e2e8f0;padding-top:1rem;">
+      Data current as of March 2026. Sources: Ballotpedia, FEC filings, and
+      candidate campaign announcements. Primary dates and filing deadlines
+      vary by state — verify with your state's Secretary of State website.
+    </p>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>
+      <a href="index.html">← Back to all states</a> &nbsp;|&nbsp;
+      Data sourced from Ballotpedia, FEC filings &amp; campaign announcements.
+    </p>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/candidates.js"></script>
+  <script src="js/state.js"></script>
+</body>
+</html>

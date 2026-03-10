@@ -1,0 +1,477 @@
+/* =========================================================
+   StateElections – Primary Election Candidates 2026
+   Styles
+   ========================================================= */
+
+/* ----- Reset & Base ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:   #1e3a5f;
+  --color-accent:    #c0392b;
+  --color-bg:        #f0f4f8;
+  --color-surface:   #ffffff;
+  --color-border:    #d1d9e0;
+  --color-text:      #1a202c;
+  --color-muted:     #718096;
+  --color-rep:       #dc2626;
+  --color-dem:       #2563eb;
+  --color-ind:       #4b5563;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,.08), 0 4px 6px rgba(0,0,0,.05);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ----- Header / Navbar ----- */
+.site-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-brand .flag-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.navbar-brand .brand-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+
+.navbar-brand .brand-sub {
+  font-size: .7rem;
+  font-weight: 400;
+  opacity: .7;
+  display: block;
+}
+
+/* ----- Hero Banner ----- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2c5282 60%, #1a365d 100%);
+  color: #fff;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin-bottom: .5rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: .85;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+
+.badge-year {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  padding: .25rem .9rem;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* ----- Controls (search / filter) ----- */
+.controls {
+  max-width: 1280px;
+  margin: 1.8rem auto .5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1 1 220px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: .6rem 1rem .6rem 2.4rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color .2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30,58,95,.12);
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: .7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  font-size: .9rem;
+  pointer-events: none;
+}
+
+.filter-btn {
+  padding: .55rem 1.1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all .15s;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.results-count {
+  margin-left: auto;
+  font-size: .85rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* ----- State Grid ----- */
+.state-grid {
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.1rem;
+}
+
+/* ----- State Card ----- */
+.state-card {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.3rem;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.state-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.state-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: .7rem;
+}
+
+.state-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.state-abbr {
+  font-size: .7rem;
+  font-weight: 600;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: .1rem .4rem;
+  color: var(--color-muted);
+  letter-spacing: .5px;
+}
+
+.race-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-bottom: .75rem;
+}
+
+.race-pill {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .18rem .55rem;
+  border-radius: 999px;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.race-pill.senate   { background: #ede9fe; color: #5b21b6; border-color: #a78bfa; }
+.race-pill.governor { background: #fff7ed; color: #9a3412; border-color: #fdba74; }
+
+.party-summary {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.party-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .82rem;
+}
+
+.party-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.party-dot.republican { background: var(--color-rep); }
+.party-dot.democrat   { background: var(--color-dem); }
+.party-dot.independent{ background: var(--color-ind); }
+.party-dot.libertarian{ background: #ca8a04; }
+.party-dot.green      { background: #16a34a; }
+
+.party-label { font-weight: 600; color: var(--color-muted); }
+.party-count { font-weight: 700; margin-left: auto; }
+
+.view-more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .25rem;
+  margin-top: .8rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ----- State Detail Page ----- */
+.page-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+  padding: .4rem .8rem;
+  border-radius: var(--radius-sm);
+  transition: background .15s;
+}
+
+.back-link:hover { background: rgba(30,58,95,.07); }
+
+.state-detail-header {
+  margin-bottom: 2rem;
+}
+
+.state-detail-header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: .25rem;
+}
+
+.state-detail-header .subtitle {
+  color: var(--color-muted);
+  font-size: .95rem;
+}
+
+/* Race section */
+.race-section {
+  margin-bottom: 2.5rem;
+}
+
+.race-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  padding-bottom: .5rem;
+  border-bottom: 2.5px solid var(--color-border);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.race-title .race-icon { font-size: 1.1rem; }
+
+/* Party column grid */
+.party-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.party-column {
+  border-radius: var(--radius-md);
+  border: 1.5px solid;
+  overflow: hidden;
+}
+
+.party-column-header {
+  padding: .65rem 1rem;
+  font-weight: 700;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.party-column-header .party-icon { font-size: 1rem; }
+
+.candidate-list {
+  padding: .5rem 0;
+}
+
+.candidate-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: .55rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.04);
+  gap: .5rem;
+}
+
+.candidate-item:last-child { border-bottom: none; }
+
+.candidate-name {
+  font-size: .9rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.candidate-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .2rem;
+}
+
+.badge-incumbent {
+  font-size: .65rem;
+  font-weight: 700;
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-status {
+  font-size: .68rem;
+  font-weight: 600;
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* No-races notice */
+.no-races-notice {
+  background: #f8fafc;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: .9rem;
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  background: var(--color-primary);
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: .82rem;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: rgba(255,255,255,.9);
+  text-decoration: underline;
+}
+
+/* ----- Utilities ----- */
+.hidden { display: none !important; }
+
+/* ----- Responsive ----- */
+@media (max-width: 600px) {
+  .controls { flex-direction: column; }
+  .results-count { margin-left: 0; }
+  .state-grid { grid-template-columns: 1fr; }
+  .party-columns { grid-template-columns: 1fr; }
+}
