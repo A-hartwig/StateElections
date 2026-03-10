@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 House Primary Races</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-link">← Home</a>
+      <h1>2026 House Primary Races</h1>
+      <p class="header-sub">All 372 Districts – 47 States with Partisan Primaries</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Controls -->
+    <section class="controls card">
+      <div class="control-group">
+        <label for="house-search">Search by state or candidate:</label>
+        <input
+          type="text"
+          id="house-search"
+          placeholder="e.g. Texas, Ohio, Pelosi…"
+          class="search-input"
+          aria-label="Search House races"
+        />
+      </div>
+      <div class="control-group">
+        <label>Jump to state:</label>
+        <select id="state-jump" class="state-select" aria-label="Jump to a state">
+          <option value="">— Select state —</option>
+        </select>
+      </div>
+    </section>
+
+    <p class="info-banner">
+      Click a state header to expand or collapse its list of districts.
+      <strong id="house-count">…</strong> states shown.
+    </p>
+
+    <!-- State accordion list -->
+    <div id="house-list" class="race-list">
+      <!-- Populated by house.js -->
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Data current as of March 2026 · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/house.js"></script>
+</body>
+</html>

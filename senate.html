@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Senate Primary Races</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="back-link">← Home</a>
+      <h1>2026 Senate Primary Races</h1>
+      <p class="header-sub">Class 2 Seats – 47 States with Partisan Primaries</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Controls -->
+    <section class="controls card">
+      <div class="control-group">
+        <label for="senate-search">Search by state:</label>
+        <input
+          type="text"
+          id="senate-search"
+          placeholder="e.g. Illinois, Texas…"
+          class="search-input"
+          aria-label="Search states"
+        />
+      </div>
+      <div class="control-group">
+        <label>Filter:</label>
+        <div class="filter-buttons" role="group" aria-label="Filter Senate races">
+          <button class="filter-btn active" data-filter="all">All States</button>
+          <button class="filter-btn" data-filter="open">Open Seats</button>
+          <button class="filter-btn" data-filter="has-race">Has Senate Race</button>
+          <button class="filter-btn" data-filter="no-race">No Senate Race in 2026</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info banner -->
+    <p class="info-banner">
+      Showing <strong id="senate-count">…</strong> states.
+      States without a Class 2 seat in 2026 are shown with a note.
+    </p>
+
+    <!-- State list -->
+    <div id="senate-list" class="race-list">
+      <!-- Populated by senate.js -->
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Data current as of March 2026 · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/senate.js"></script>
+</body>
+</html>
