@@ -574,7 +574,7 @@ const HOUSE_RACES = {
   Alabama: {
     1: { candidates: { Republican: [{ name: "Barry Moore",      incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     2: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] }, note: "New seat created by redistricting; majority-minority district." },
-    3: { candidates: { Republican: [{ name: "Mike Rogers",      incumbent: false, status: "TBD" }],  Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
+    3: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }],  Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     4: { candidates: { Republican: [{ name: "Robert Aderholt",  incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     5: { candidates: { Republican: [{ name: "Dale Strong",      incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     6: { candidates: { Republican: [{ name: "Gary Palmer",      incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
@@ -586,7 +586,7 @@ const HOUSE_RACES = {
     1: { candidates: { Republican: [{ name: "David Schweikert", incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     2: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Tom O'Halleran",    incumbent: false, status: "Exploring" }] } },
     3: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Ruben Gallego (Senate 2024)", incumbent: false, status: "TBD" }], note: "Gallego won AZ Senate seat in 2024; seat is now open." } },
-    4: { candidates: { Republican: [{ name: "Greg Stanton",     incumbent: false, status: "TBD" }],   Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
+    4: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }],   Democrat: [{ name: "Greg Stanton",     incumbent: true,  status: "Running" }] } },
     5: { candidates: { Republican: [{ name: "Andy Biggs",       incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     6: { candidates: { Republican: [{ name: "Juan Ciscomani",   incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     7: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Raúl Grijalva",      incumbent: true,  status: "Running" }] } },
@@ -636,7 +636,7 @@ const HOUSE_RACES = {
     4:  { candidates: { Republican: [{ name: "Aaron Bean",              incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     5:  { candidates: { Republican: [{ name: "John Rutherford",         incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     6:  { candidates: { Republican: [{ name: "Michael Waltz (vacated)", incumbent: false, status: "TBD" }],  Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], note: "Waltz became National Security Advisor; special election scheduled." } },
-    7:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Cory Mills",        incumbent: false, status: "TBD" }] } },
+    7:  { candidates: { Republican: [{ name: "Cory Mills",        incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     8:  { candidates: { Republican: [{ name: "Bill Posey",              incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     9:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Darren Soto",        incumbent: true,  status: "Running" }] } },
     10: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Maxwell Frost",      incumbent: true,  status: "Running" }] } },
@@ -704,7 +704,7 @@ const HOUSE_RACES = {
     10: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Brad Schneider",     incumbent: true,  status: "Running" }], note: "Schneider is also running for Senate." } },
     11: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Bill Foster",        incumbent: true,  status: "Running" }] } },
     12: { candidates: { Republican: [{ name: "Mike Bost",          incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
-    13: { candidates: { Republican: [{ name: "Nikki Budzinski (lost 2024)", incumbent: false, status: "TBD" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
+    13: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Nikki Budzinski",            incumbent: true,  status: "Running" }] } },
     14: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Lauren Underwood",   incumbent: true,  status: "Running" }], note: "Underwood is also exploring Senate race." } },
     15: { candidates: { Republican: [{ name: "Mary Miller",        incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     16: { candidates: { Republican: [{ name: "Darin LaHood",       incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
@@ -811,7 +811,7 @@ const HOUSE_RACES = {
   // ── Minnesota ─────────────────────────────────────────────────────────────
   Minnesota: {
     1: { candidates: { Republican: [{ name: "Brad Finstad",     incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
-    2: { candidates: { Republican: [{ name: "Angie Craig (lost 2024)", incumbent: false, status: "TBD" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
+    2: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Angie Craig",             incumbent: true,  status: "Running" }] } },
     3: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Kelly Morrison",     incumbent: true,  status: "Running" }] } },
     4: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Betty McCollum",     incumbent: true,  status: "Running" }] } },
     5: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Ilhan Omar",         incumbent: true,  status: "Running" }] } },
@@ -895,7 +895,7 @@ const HOUSE_RACES = {
     1:  { candidates: { Republican: [{ name: "Nick LaLota",        incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     2:  { candidates: { Republican: [{ name: "Andrew Garbarino",   incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     3:  { candidates: { Republican: [{ name: "George Santos (expelled)", incumbent: false, status: "TBD" }], Democrat: [{ name: "Tom Suozzi",         incumbent: true,  status: "Running" }], note: "Tom Suozzi won the February 2024 special election." } },
-    4:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Anthony D'Esposito",  incumbent: false, status: "TBD" }] } },
+    4:  { candidates: { Republican: [{ name: "Anthony D'Esposito",  incumbent: true,  status: "Running" }], Democrat: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }] } },
     5:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Gregory Meeks",       incumbent: true,  status: "Running" }] } },
     6:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Grace Meng",          incumbent: true,  status: "Running" }] } },
     7:  { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Nydia Velázquez",      incumbent: true,  status: "Running" }] } },
@@ -978,7 +978,7 @@ const HOUSE_RACES = {
     3: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Maxine Dexter",       incumbent: true,  status: "Running" }] } },
     4: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Val Hoyle",           incumbent: true,  status: "Running" }] } },
     5: { candidates: { Republican: [{ name: "Lori Chavez-DeRemer (Senate 2024)", incumbent: false, status: "TBD" }], Democrat: [{ name: "Janelle Bynum", incumbent: false, status: "TBD" }], note: "Chavez-DeRemer left for Cabinet; Bynum ran in 2024." } },
-    6: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Andrea Salinas (lost 2024)", incumbent: false, status: "TBD" }] } }
+    6: { candidates: { Republican: [{ name: "TBD – Filing Period Open", incumbent: false, status: "TBD" }], Democrat: [{ name: "Andrea Salinas",             incumbent: true,  status: "Running" }] } }
   },
 
   // ── Pennsylvania ──────────────────────────────────────────────────────────
