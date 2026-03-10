@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StateElections – 2026 Primary Election Candidates</title>
+  <meta name="description"
+        content="Browse 2026 primary election candidates for all 50 US states, organized by race and party affiliation." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">
+        <span class="flag-icon">🗳️</span>
+        <span>
+          <span class="brand-text">StateElections</span>
+          <span class="brand-sub">2026 Primary Candidates</span>
+        </span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <span class="badge-year">2026 Election Cycle</span>
+    <h1>Primary Election Candidates</h1>
+    <p>
+      Browse announced candidates for U.S. Senate and Governor primaries
+      across all 50 states, organized by party affiliation.
+    </p>
+  </section>
+
+  <!-- ========== CONTROLS ========== -->
+  <div class="controls">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search states…"
+        autocomplete="off"
+        aria-label="Search states"
+      />
+    </div>
+
+    <button class="filter-btn active" data-filter="all">All States</button>
+    <button class="filter-btn" data-filter="senate">Senate Races</button>
+    <button class="filter-btn" data-filter="governor">Governor Races</button>
+
+    <span class="results-count" id="resultsCount">50 states</span>
+  </div>
+
+  <!-- ========== STATE GRID ========== -->
+  <main>
+    <div class="state-grid" id="stateGrid">
+      <!-- Cards rendered by app.js -->
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>
+      Data current as of March 2026. Sources: Ballotpedia, FEC filings, and
+      candidate campaign announcements. Primary schedules and filing deadlines
+      vary by state — verify details with your
+      <a href="https://www.usa.gov/election-office" target="_blank" rel="noopener noreferrer">
+        state's Secretary of State</a>.
+    </p>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/candidates.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
